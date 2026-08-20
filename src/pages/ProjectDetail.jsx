@@ -1,7 +1,9 @@
+import { useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import projects from '../data/projects'
 
 function ProjectDetail() {
+  const [selectedImage, setSelectedImage] = useState(null)
   const { slug } = useParams()
 
   const project = projects.find(
@@ -212,12 +214,15 @@ function ProjectDetail() {
                 key={index}
                 >
 
-                <div className="gallery-image">
-                    <img
+                <button
+                  className="gallery-image"
+                  onClick={() => setSelectedImage(item)}
+                >
+                  <img
                     src={item.image}
                     alt={item.title}
-                    />
-                </div>
+                  />
+                </button>
 
                 <figcaption>
                     <h3>{item.title}</h3>
@@ -230,6 +235,49 @@ function ProjectDetail() {
             </div>
 
         </section>
+        )}
+
+        {selectedImage && (
+
+          <div
+            className="lightbox"
+            onClick={() => setSelectedImage(null)}
+          >
+
+            <div
+              className="lightbox-content"
+              onClick={(event) => event.stopPropagation()}
+            >
+
+              <button
+                className="lightbox-close"
+                onClick={() => setSelectedImage(null)}
+                aria-label="Cerrar imagen"
+              >
+                ×
+              </button>
+
+              <img
+                src={selectedImage.image}
+                alt={selectedImage.title}
+              />
+
+              <div className="lightbox-info">
+
+                <h3>
+                  {selectedImage.title}
+                </h3>
+
+                <p>
+                  {selectedImage.description}
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
+
         )}
 
     </main>
