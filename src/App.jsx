@@ -1,6 +1,10 @@
 import './App.css'
 import ProjectCard from './components/ProjectCard'
+import About from './components/About'
+import Contact from './components/Contact'
+
 import projects from './data/projects'
+
 import { Routes, Route } from 'react-router-dom'
 import ProjectDetail from './pages/ProjectDetail'
 
@@ -29,7 +33,7 @@ function Home() {
           </p>
 
           <p className="hero-description">
-            Desarrollo sistemas que integran hardware, software e IA por más que me resista para resolver problemas reales.
+            Desarrollo sistemas que integran hardware, software e IA (por más que me resista) para resolver problemas reales.
           </p>
 
           <div className="hero-actions">
@@ -74,6 +78,12 @@ function Home() {
         </div>
 
       </section>
+
+      <About />
+
+      <Contact />
+
+      
 
     </div>
   )
