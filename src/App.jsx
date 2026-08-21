@@ -55,14 +55,8 @@ function Home() {
         <div className="projects-header">
 
           <p className="section-label">
-            Proyectos seleccionados
+            Proyectos
           </p>
-
-          <h2>
-            Hardware, software
-            <br />
-            y sistemas inteligentes.
-          </h2>
 
         </div>
 

@@ -481,36 +481,6 @@ const projects = [
       implementation: "Calimocho Restaurante · Ixtapaluca, Estado de México",
     },
   },
-
-  {
-    id: 3,
-    slug: "sistema-multisensorial",
-    title: "Sistema multisensorial",
-
-    category: "ESP32 · IMU · EMG · Embedded Systems",
-
-    description:
-      "Sistema distribuido para adquisición de señales inerciales y electromiográficas mediante nodos embebidos.",
-
-    image: "/images/sensors.jpg",
-
-    overview:
-      "Sistema de sensado distribuido diseñado para registrar variables biomecánicas utilizando sensores inerciales y señales electromiográficas.",
-
-    problem:
-      "La estimación del movimiento humano requiere combinar distintas fuentes de información para obtener mediciones más robustas.",
-
-    solution:
-      "Se integraron nodos embebidos con sensores inerciales y adquisición de EMG para obtener información sincronizada durante el movimiento.",
-
-    technologies: [
-      "ESP32",
-      "IMU",
-      "EMG",
-      "C++",
-      "Embedded Systems",
-    ],
-  },
 ]
 
 export default projects
